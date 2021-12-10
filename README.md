@@ -2,7 +2,9 @@
 Diseño e implementación de un sistema de cadena de cines.
 
 # Miembros
+
 **Morales Panitz, Alexander**
+
 **Ugarte Quispe, Grover**
 
 ## Rúbrica
