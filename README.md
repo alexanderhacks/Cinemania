@@ -14,3 +14,14 @@ Diseño e implementación de un sistema de cadena de cines.
 - [ ] Se utiliza patrones de diseño (5 mínimo)
 - [ ] Uso adecuado del Github
 
+## Tasks
+
+1. Grover:
+    -> Autenticación
+    -> Funciones
+
+2. Alexander:
+    -> Manejo de errores del sistema
+    -> Algoritmo de encriptación de archivos.
+    -> Generación de tokens para la realización de cada actividad del sistema
+    -> Manejo de ODBC driver con psqlODBC: [psqlODBC](https://odbc.postgresql.org/)
