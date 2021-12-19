@@ -3,6 +3,9 @@
 FLoaderUsuario::FLoaderUsuario(const string &_path):FLoader(_path){
 }
 
+FLoaderUsuario::FLoaderUsuario(){}
+
+
 
 vector<string> FLoaderUsuario::juntarPalabras(){
     vector<string> result;

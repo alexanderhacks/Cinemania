@@ -11,6 +11,7 @@
 #include<functional>
 #include<algorithm>
 #include<iterator>
+#include"Menu.h"
 using namespace std;
 
 
@@ -20,9 +21,13 @@ int main(){
 
 
     cout<<*pelis.getObjetos()[2]; */
+    Menu ab;
+    ab.Bienvenida();
 
-    FLoaderUsuario Clientes("data/cCliente.csv");
-    
+     //Testeo menu
+    // FLoaderUsuario Clientes("data/cCliente.csv");
+    // cout<<Clientes.objetos.size();
+    #if 0
     Clientes.CargarArchivo();
     vector<Usuario*> temps = Clientes.getObjetos();
     auto incorrecto = temps.end();
@@ -39,6 +44,7 @@ int main(){
         });
 
     }while(incorrecto == temps.end());
+    #endif
 
     // FLoaderUsuario Administradores("cAdmin.csv");
 

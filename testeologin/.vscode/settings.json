@@ -8,6 +8,15 @@
         "xiosbase": "cpp",
         "thread": "cpp",
         "string": "cpp",
-        "xutility": "cpp"
+        "xutility": "cpp",
+        "functional": "cpp",
+        "array": "cpp",
+        "format": "cpp",
+        "forward_list": "cpp",
+        "initializer_list": "cpp",
+        "list": "cpp",
+        "xhash": "cpp",
+        "xtree": "cpp",
+        "fstream": "cpp"
     }
 }

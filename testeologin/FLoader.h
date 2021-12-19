@@ -15,6 +15,7 @@ template<typename objeto>
 class FLoader{
 
     public:
+    FLoader(){}
     FLoader(const string &_path): path(_path){}
     virtual ~FLoader(){}
 
@@ -28,9 +29,7 @@ class FLoader{
         this->actualizar(lineas);
     }
 
-    vector<objeto*> getObjetos(){
-        return objetos;
-    }
+    vector<objeto*> objetos;
 
     protected:
 
@@ -63,11 +62,12 @@ class FLoader{
     }
 
     string path;
-    vector<objeto*> objetos;
+    
 };
 
 class FLoaderUsuario: public FLoader<Usuario>{
     public:
+    FLoaderUsuario();
     FLoaderUsuario(const string &_path);
 
     protected:
