@@ -1,56 +1,32 @@
-#include<iostream>
+// #include "Usuario.h"
+
 #include<fstream>
 #include<string>
-#include<cstdlib>
-
+#include<iostream>
+#include "FLoader.h"
+#include "Usuario.h"
 using namespace std;
 
-class Usuario{
+class ab{
     public:
-    Usuario();
-    Usuario(string _nombre, string _apellido, string _dni, string _clave);
-    void setNombre();
-    void setApellido();
-    void setClave();
-    void setDni();
+    ab(){id++;}
+    int gg(){return ab::id;}
     private:
-    string nombre, apellido, dni, clave;
+    static int id;
 };
 
-void Usuario::setNombre(){
-    cout<<"Ingrese su nuevo nombre: ";
-    cin>>nombre;
-}
-
-void Usuario::setApellido(){
-    cout<<"Ingrese su nuevo apellido: ";
-    cin>>apellido;
-}
-
-void Usuario::setDni(){
-    cout<<"Ingrese su nuevo dni: ";
-    cin>>dni;
-}
-
-void Usuario::setClave(){
-    cout<<"Ingrese su nueva clave: ";
-    cin>>clave;
-}
-
-Usuario::Usuario(string _nombre, string _apellido, string _dni, string _clave):
-nombre(_nombre), apellido(_apellido), dni(_dni), clave(_clave){}
-
-Usuario::Usuario(){
-    cout<<"Ingrese su nombre: ";
-    cin>>nombre;
-    cout<<"Ingrese su apellido: ";
-    cin>>apellido;
-    cout<<"Ingrese su dni: ";
-    cin>>dni;
-    cout<<"Ingrese su clave: ";
-    cin>>clave;
-}
-
 int main(){
+    FLoaderUsuario Clientes("cCliente.csv");
+    FLoaderUsuario Administradores("cAdmin.csv");
 
-}
+    ab t1();
+    t1.gg();
+
+    // Clientes.CargarArchivo();
+    // Administradores.CargarArchivo();
+    // cout<<*Clientes.getObjetos()[0];
+    // cout<<Clientes.getObjetos().size();
+
+    // Clientes.getObjetos()[]
+
+}  
