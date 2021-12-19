@@ -84,13 +84,3 @@ class FLoaderPelicula: public FLoader<Pelicula>{
 };
 
 #endif
-/* {
-        vector<string> result;
-
-        for(auto i :usuarios){
-            string csv_u{i->getNombre() + ", " + i->getApellido() + ", " + i->getDni() + ", " + i->getClave()};
-            result.push_back(csv_u);
-        }
-
-        return result;
-    } */

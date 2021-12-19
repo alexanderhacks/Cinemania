@@ -1,7 +1,5 @@
 #include "Usuario.h"
 
-Usuario::~Usuario(){}
-
 ostream& operator<<(ostream &os, const Usuario& usr){
     os<<"Nonmbre: "<<usr.nombre<<'\n';
     os<<"Apellido: "<<usr.apellido<<'\n';

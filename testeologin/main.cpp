@@ -9,6 +9,8 @@
 #include<thread>
 #include "Funcion.h"
 #include<functional>
+#include<algorithm>
+#include<iterator>
 using namespace std;
 
 
@@ -20,23 +22,23 @@ int main(){
     cout<<*pelis.getObjetos()[2]; */
 
     FLoaderUsuario Clientes("data/cCliente.csv");
+    
     Clientes.CargarArchivo();
+    vector<Usuario*> temps = Clientes.getObjetos();
+    auto incorrecto = temps.end();
+    do{
+        string dni, clave;
+        cout<<"Ingrese dni: ";
+        cin>>dni;
+        cout<<"Ingrese clave: ";
+        cin>>clave;
 
-    string dni, clave;
-    cout<<"Ingrese dni: ";
-    cin>>dni;
-    cout<<"Ingrese clave: ";
-    cin>>clave;
+        incorrecto = find_if(begin(temps), end(temps), [dni, clave](Usuario* usr){
+            bool a = dni== usr->getDni(), b=clave==usr->getClave();
+            return a&&b;
+        });
 
-    Usuario temp("", "", dni ,clave);
-
-    bool incorrecto =false;
-    for(auto usr: Clientes.getObjetos()){
-        if(*usr==temp){
-            incorrecto = true;
-            break;
-        }
-    }
+    }while(incorrecto == temps.end());
 
     // FLoaderUsuario Administradores("cAdmin.csv");
 
@@ -60,4 +62,4 @@ int main(){
 
     // Clientes.getObjetos()[]
 
-}  
+}

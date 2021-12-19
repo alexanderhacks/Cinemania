@@ -1,5 +1,5 @@
-#ifndef usuario_h
-#define usuario_h
+#ifndef Usuario_h
+#define Usuario_h
 
 #include<iostream>
 #include<fstream>
