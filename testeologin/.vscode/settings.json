@@ -2,6 +2,10 @@
     "files.associations": {
         "iosfwd": "cpp",
         "iostream": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "chrono": "cpp",
+        "xstring": "cpp",
+        "xiosbase": "cpp",
+        "thread": "cpp"
     }
 }
