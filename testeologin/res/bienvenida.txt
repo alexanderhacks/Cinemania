@@ -3,7 +3,7 @@ Bienvenido a la cadena de cines Cinemania
 Este es el menu principal
 
 Indicanos si
--   eres un usuario nuevo (1)
 -   eres un usuario recurrente (0)
+-   eres un usuario nuevo (1)
 
 Opcion: 

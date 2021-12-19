@@ -1,5 +1,7 @@
 #include "Menu.h"
 
+Menu::~Menu(){
+}
 Menu::Menu(){
     Clientes.CargarArchivo();
 }
@@ -21,7 +23,18 @@ void Menu::LogIn(){
     
     }while(incorrecto==end(Clientes.objetos));
 
+    select = &(**incorrecto);
+    cout<<*select;
+    // select = &(*incorrecto);
+    // cout<<*select;
+    jerarquia.pop();
 
+}
+
+void Menu::SignUp(){
+    Usuario nuevo{utilidad::leerTextoIN<Usuario>("res/signup.txt")};
+    cout<<nuevo;
+    // Usuario nuevo{utilidad::leerTextoIN(string("res/signup.txt"))};
 }
 
 void Menu::Bienvenida(){
@@ -29,8 +42,11 @@ void Menu::Bienvenida(){
     utilidad::leerTexto("res/bienvenida.txt");
     
     vector<function<void(void)>> temp{
-        [=](){LogIn();}
+        [=](){LogIn();},
+        [=](){SignUp();}
     };
 
-    utilidad::voidChooser(temp);
+    utilidad::voidChooser(jerarquia,temp);
+
+    jerarquia.top()();
 }

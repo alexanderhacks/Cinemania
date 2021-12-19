@@ -5,6 +5,7 @@
 #include<fstream>
 #include<string>
 #include<cstdlib>
+#include<vector>
 
 using namespace std;
 
@@ -12,6 +13,7 @@ class Usuario{
     public:
     Usuario();
     Usuario(string _nombre, string _apellido, string _dni, string _clave);
+    Usuario(const vector<string>&_args);
     void setNombre();
     void setApellido();
     void setClave();

@@ -1,11 +1,16 @@
 #include "Usuario.h"
 
+Usuario::Usuario(const vector<string>&_args)
+    :nombre(_args[0]), apellido(_args[1]), dni(_args[2]), clave(_args[3]){    }
+
 ostream& operator<<(ostream &os, const Usuario& usr){
     os<<"Nonmbre: "<<usr.nombre<<'\n';
     os<<"Apellido: "<<usr.apellido<<'\n';
     os<<"DNI: "<<usr.dni<<'\n';
     return os;
 }
+
+Usuario::~Usuario(){}
 
 bool operator==(const Usuario& usr1, const Usuario& usr2){
     bool dni = usr1.dni == usr2.dni;
