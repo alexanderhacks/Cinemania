@@ -24,6 +24,8 @@ class Usuario{
 
     friend ostream& operator<<(ostream &os, const Usuario& usr);
 
+    friend bool operator==(const Usuario& usr1, const Usuario& usr2);
+
     private:
     string nombre, apellido, dni, clave;
 };

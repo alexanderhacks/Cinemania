@@ -9,6 +9,12 @@ ostream& operator<<(ostream &os, const Usuario& usr){
     return os;
 }
 
+bool operator==(const Usuario& usr1, const Usuario& usr2){
+    bool dni = usr1.dni == usr2.dni;
+    bool clave = usr1.clave == usr2.clave;
+    return dni && clave;
+}
+
 string Usuario::getNombre(){
     return nombre;
 }

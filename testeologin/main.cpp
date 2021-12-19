@@ -13,13 +13,30 @@ using namespace std;
 
 
 int main(){
-    FLoaderPelicula pelis;
+ /*    FLoaderPelicula pelis;
     pelis.CargarArchivo();
 
 
-    cout<<*pelis.getObjetos()[2];
+    cout<<*pelis.getObjetos()[2]; */
 
-    // FLoaderUsuaro Clientes("cCliente.csv");
+    FLoaderUsuario Clientes("data/cCliente.csv");
+    Clientes.CargarArchivo();
+
+    string dni, clave;
+    cout<<"Ingrese dni: ";
+    cin>>dni;
+    cout<<"Ingrese clave: ";
+    cin>>clave;
+
+    Usuario temp("", "", dni ,clave);
+
+    bool incorrecto =false;
+    for(auto usr: Clientes.getObjetos()){
+        if(*usr==temp){
+            incorrecto = true;
+            break;
+        }
+    }
 
     // FLoaderUsuario Administradores("cAdmin.csv");
 

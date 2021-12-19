@@ -31,7 +31,7 @@ void FLoaderUsuario::asignarObjetos(const vector<string>&_lineas){
 
 }
 
-FLoaderPelicula::FLoaderPelicula():FLoader("pelicula.csv"){}
+FLoaderPelicula::FLoaderPelicula():FLoader("data/pelicula.csv"){}
 
 vector<string> FLoaderPelicula::juntarPalabras(){
     vector<string> result;
