@@ -7,6 +7,7 @@
 #include"Usuario.h"
 #include<string>
 #include<sstream>
+#include"Funcion.h"
 
 using namespace std;
 
@@ -34,7 +35,7 @@ class FLoader{
     protected:
 
     virtual vector<string> juntarPalabras() = 0;
-    virtual void asignarObjetos(const vector<string>_lineas) = 0;
+    virtual void asignarObjetos(const vector<string>&_lineas) = 0;
 
     virtual vector<string> cargarLineas(){
         vector<string> result;
@@ -71,14 +72,16 @@ class FLoaderUsuario: public FLoader<Usuario>{
 
     protected:
     vector<string> juntarPalabras() override;
-    void asignarObjetos(const vector<string>_lineas) override;
+    void asignarObjetos(const vector<string>&_lineas) override;
 };
 
-/* class FLoaderCliente: public FLoaderUsuario{
+class FLoaderPelicula: public FLoader<Pelicula>{
     public:
-    FLoaderCliente();
+    FLoaderPelicula();
     protected:
-}; */
+    vector<string> juntarPalabras() override;
+    void asignarObjetos(const vector<string>&_lineas) override;
+};
 
 #endif
 /* {

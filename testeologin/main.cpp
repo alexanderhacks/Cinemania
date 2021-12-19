@@ -13,11 +13,17 @@ using namespace std;
 
 
 int main(){
-    // FLoaderUsuario Clientes("cCliente.csv");
+    FLoaderPelicula pelis;
+    pelis.CargarArchivo();
+
+
+    cout<<*pelis.getObjetos()[2];
+
+    // FLoaderUsuaro Clientes("cCliente.csv");
 
     // FLoaderUsuario Administradores("cAdmin.csv");
 
-    Pelicula test("gaa", "TuMAMAMA", 5);
+/*     Pelicula test("gaa", "TuMAMAMA", 5);
     Pelicula test2("gael", "Tupapapap", 5);
     Funcion fun1(test);
     Funcion fun2(test2);
@@ -29,7 +35,7 @@ int main(){
 
 
     t1.join();
-    t2.join();
+    t2.join(); */
     // Clientes.CargarArchivo();
     // Administradores.CargarArchivo();
     // cout<<*Clientes.getObjetos()[0];

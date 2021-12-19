@@ -46,3 +46,10 @@ void Funcion::Stream(){
 
     salida.close();
 }
+
+ostream& operator<<(ostream &os, const Pelicula &p){
+    os<<"Nombre de pelicula: "<<p.nombre<<'\n';
+    os<<"Duracion: "<<p.tiempo*0.16<<" horas"<<'\n';
+
+    return os;
+}

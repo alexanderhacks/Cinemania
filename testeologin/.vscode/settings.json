@@ -6,6 +6,7 @@
         "chrono": "cpp",
         "xstring": "cpp",
         "xiosbase": "cpp",
-        "thread": "cpp"
+        "thread": "cpp",
+        "string": "cpp"
     }
 }
