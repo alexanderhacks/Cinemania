@@ -1,5 +1,10 @@
 #include "Usuario.h"
 
+Usuario::Usuario(const int& _null)
+:nombre(""), apellido(""), dni(""), clave(""){
+
+}
+
 Usuario::Usuario(const vector<string>&_args)
     :nombre(_args[0]), apellido(_args[1]), dni(_args[2]), clave(_args[3]){    }
 

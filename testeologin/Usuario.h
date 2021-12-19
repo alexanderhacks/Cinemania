@@ -12,6 +12,7 @@ using namespace std;
 class Usuario{
     public:
     Usuario();
+    Usuario(const int& _null);
     Usuario(string _nombre, string _apellido, string _dni, string _clave);
     Usuario(const vector<string>&_args);
     void setNombre();

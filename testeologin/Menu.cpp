@@ -32,9 +32,20 @@ void Menu::LogIn(){
 }
 
 void Menu::SignUp(){
-    Usuario nuevo{utilidad::leerTextoIN<Usuario>("res/signup.txt")};
-    cout<<nuevo;
-    // Usuario nuevo{utilidad::leerTextoIN(string("res/signup.txt"))};
+    auto it = begin(Clientes.objetos);
+
+    Usuario nuevo(2);
+    while(it!=end(Clientes.objetos)){
+
+        nuevo =utilidad::leerTextoIN<Usuario>("res/signup.txt");
+        string id = nuevo.getDni();
+        
+        it = find_if(begin(Clientes.objetos), end(Clientes.objetos), [id](Usuario* usr){
+            return id==usr->getDni();
+        });
+    }
+    Clientes.objetos.push_back(new Usuario(nuevo));
+    Clientes.EscribirArchivo();
 }
 
 void Menu::Bienvenida(){
