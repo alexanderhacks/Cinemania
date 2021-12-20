@@ -37,10 +37,17 @@ class Menu{
     void verCompras();
     void addCompra(Establecimiento _e, Funcion _f);
 
+    void IniciarFuncion();
+    void EjecutarFunciones(vector<Funcion>_funciones);
+    void CrearFuncion();
+
+
     private:
     FLoaderUsuario Clientes = FLoaderUsuario("data/cCliente.csv");
     FLoaderUsuario Administradores = FLoaderUsuario("data/cAdmin.csv");
     FLoaderPelicula Peliculas = FLoaderPelicula("data/pelicula.csv");
+
+    vector<thread> EjecucionesFuncion;
 
     vector<Establecimiento> ests;
 

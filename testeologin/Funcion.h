@@ -11,6 +11,7 @@
 #include"Pelicula.h"
 #include"Sala.h"
 #include<vector>
+#include<cstdlib>
 
 using namespace std;
 
@@ -37,7 +38,7 @@ class Funcion{
     friend ostream& operator<<(ostream& os, Funcion f);
     
     private:
-    void Stream();
+    void Stream();    
     Pelicula peli;
     Sala salaobj;
 };

@@ -12,3 +12,7 @@ Detalles de la funcion:
 
 Ubicacion: 
 ---------------------------
+
+
+Datos del cliente:
+---------------------------

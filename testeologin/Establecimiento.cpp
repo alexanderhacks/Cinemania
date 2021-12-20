@@ -1,5 +1,9 @@
 #include"Establecimiento.h"
 
+vector<Sala> Establecimiento::getSalas(){
+    return Salas;
+}
+
 Establecimiento::Establecimiento(const string &_nombre, const string &_direccion, const vector<Sala>& _salas, string _path)
 :nombre(_nombre), direccion(_direccion), Salas(_salas){
     Funciones = FLoaderFuncion(_path);
@@ -33,5 +37,5 @@ void Establecimiento::verFunciones(){
         cout<<"Id de funcion: "<<i<<endl;
         cout<<"Pelicula a emitir: "<<j.getPelicula()<<endl;
     }
-    cout<<"========"<<endl;
+    cout<<"========\n"<<endl;
 }

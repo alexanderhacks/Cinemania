@@ -49,7 +49,7 @@ using namespace std;
     vector<Establecimiento> Ests =  {
     Establecimiento("Canhete", "Av. Tobias Prado 123", SEst1, "data/apts/e1Funcion.csv"),
     Establecimiento("Surco", "Jr. Andres Veridico 333", SEst2,"data/apts/e2Funcion.csv"),
-    Establecimiento("Surco", "Ca. Tomas Valle 435", SEst3,"data/apts/e3Funcion.csv")
+    Establecimiento("Miraflores", "Ca. Tomas Valle 435", SEst3,"data/apts/e3Funcion.csv")
 };
 
 

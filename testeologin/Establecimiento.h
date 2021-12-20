@@ -21,6 +21,8 @@ class Establecimiento{
     string getNombres();
     string getDireccion();
 
+    vector<Sala>getSalas();
+
     void verFunciones();
 
     friend ostream& operator<<(ostream &os, const Establecimiento& e );

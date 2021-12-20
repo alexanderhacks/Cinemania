@@ -1,10 +1,11 @@
 Bienvenido senhor
 
-Por favor, diganos que acción desea realizar:
+Por favor, diganos que accion desea realizar:
 
 -   0: Ver funciones por cine
 -   1: Comprar entradas
 -   2: Ver peliculas en cartelera
 -   3: Ver compras
+-   4: Salir
 
 Opcion: 

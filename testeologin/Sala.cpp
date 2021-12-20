@@ -20,3 +20,9 @@ Sala::Sala(const int& _nro_sala, const int&_aforo):nro_sala(_nro_sala){
 int Sala::getAforo(){
     return tipo.getAforo();
 }
+
+ostream& operator<<(ostream& os, Sala s){
+    os<<"Nro Sala: "<<s.nro_sala<<'\n';
+    os<<"Aforo: "<<s.getAforo()<<'\n';
+    return os;
+}
