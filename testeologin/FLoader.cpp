@@ -1,12 +1,32 @@
 #include "FLoader.h"
 
-FLoaderUsuario::FLoaderUsuario(const string &_path):FLoader(_path){
+FLoaderFuncion::FLoaderFuncion(){}
+FLoaderFuncion::FLoaderFuncion(const string &_path):FLoader(_path){}
+vector<string> FLoaderFuncion::juntarPalabras(){
+    vector<string> result;
+
+    for(auto i :objetos){
+        string csv_u = (*i)[0]+ ","+(*i)[1];
+        result.push_back(csv_u);
+    }
+
+    return result;
+}
+void FLoaderFuncion::asignarObjetos(const vector<string>&_lineas){
+    for(auto st: _lineas){
+        stringstream linea(st);
+        string componente;
+        vector<string> args;
+        while (getline(linea, componente,',')){
+            args.push_back(componente);
+        }
+        objetos.push_back(new vector<string>{args[0], args[1]});
+    }
 }
 
+FLoaderUsuario::FLoaderUsuario(const string &_path):FLoader(_path){}
+FLoaderPelicula::FLoaderPelicula(const string &_path):FLoader(_path){}
 FLoaderUsuario::FLoaderUsuario(){}
-
-
-
 vector<string> FLoaderUsuario::juntarPalabras(){
     vector<string> result;
 

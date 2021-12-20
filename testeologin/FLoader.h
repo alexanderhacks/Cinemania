@@ -78,6 +78,17 @@ class FLoaderUsuario: public FLoader<Usuario>{
 class FLoaderPelicula: public FLoader<Pelicula>{
     public:
     FLoaderPelicula();
+    FLoaderPelicula(const string &_path);
+    protected:
+    vector<string> juntarPalabras() override;
+    void asignarObjetos(const vector<string>&_lineas) override;
+};
+
+// using FuncionDetalle = vector<string>;
+class FLoaderFuncion: public FLoader<vector<string>>{
+    public:
+    FLoaderFuncion();
+    FLoaderFuncion(const string &_path);
     protected:
     vector<string> juntarPalabras() override;
     void asignarObjetos(const vector<string>&_lineas) override;

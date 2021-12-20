@@ -15,5 +15,6 @@ void utilidad::leerTexto(const string& _path){
 void utilidad::voidChooser(stack<function<void(void)>> &top,vector<function<void(void)>>&_functs){
     int n;
     cin>>n;
+    if(n<_functs.size() && n>=0)
     top.push(_functs[n]);
 }

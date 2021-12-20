@@ -8,34 +8,23 @@
 #include<fstream>
 #include<iostream>
 #include<sstream>
+#include"Pelicula.h"
+#include"Sala.h"
 
 using namespace std;
 
-class Pelicula{
-    public:
-    Pelicula()=default;
-    Pelicula(const string &_nombre, const string &_script, const int &_tiempo);
-    
-    string getNombre();
-    int getTiempo();
-    string getScriptPath();
-
-    friend ostream& operator<<(ostream &os, const Pelicula &p);
-    private:
-    string nombre, script_path;
-    int tiempo;
-};
-
 class Funcion{
     public:
-    Funcion(const Pelicula &_peli);
+    Funcion(const Pelicula &_peli, const Sala& _salaobj);
 
     thread StreamThread();
+
+    friend ostream& operator<<(ostream& os, Funcion f);
     
     private:
     void Stream();
     Pelicula peli;
-
+    Sala salaobj;
 };
 
 #endif

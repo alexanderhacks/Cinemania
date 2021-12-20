@@ -1,19 +1,20 @@
 #include "Funcion.h"
 
-Pelicula::Pelicula(const string &_nombre, const string &_script, const int &_tiempo)
-:nombre(_nombre), script_path(_script), tiempo(_tiempo){
-
+ostream& operator<<(ostream& os, Funcion f){
+    os<<f.peli.getNombre()<<','<<f.salaobj.getNroSala()<<'\n';
+    return os;
 }
 
-string Pelicula::getScriptPath(){return script_path;}
-string Pelicula::getNombre(){return nombre;}
-int Pelicula::getTiempo(){return tiempo;}
+
+Funcion::Funcion(const Pelicula &_peli, const Sala& _salaobj)
+:peli(_peli), salaobj(_salaobj){}
 
 
-Funcion::Funcion(const Pelicula &_peli):peli(_peli){}
 thread Funcion::StreamThread(){
     return thread([=]{Stream();});
 }
+
+
 void Funcion::Stream(){
 
     time_t actual;
@@ -47,9 +48,3 @@ void Funcion::Stream(){
     salida.close();
 }
 
-ostream& operator<<(ostream &os, const Pelicula &p){
-    os<<"Nombre de pelicula: "<<p.nombre<<'\n';
-    os<<"Duracion: "<<p.tiempo*0.16<<" horas"<<'\n';
-
-    return os;
-}
