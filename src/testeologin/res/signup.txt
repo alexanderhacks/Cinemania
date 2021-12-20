@@ -1,0 +1,4 @@
+Ingrese su nombre: 
+Ingrese su apellido: 
+Ingrese su dni: 
+Ingrese su clave: 

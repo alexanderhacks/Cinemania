@@ -1,0 +1,11 @@
+Bienvenido senhor administrador
+
+Por favor, diganos que acción desea realizar:
+
+-   0: Programar una nueva función de cine
+-   1: Iniciar una función de cine
+-   2: Agregar/Quitar productos de la dulcería
+-   3: Asignar nuevas credenciales a un nuevo trabajador
+-   4: Visualizar las funciones de hoy
+
+Opcion: 
