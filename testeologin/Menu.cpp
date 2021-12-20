@@ -350,5 +350,4 @@ void Menu::MenuAdmin(){
     jerarquia.top()();
     jerarquia.pop();
     jerarquia.top()();
-    // system("clear");
 }

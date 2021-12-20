@@ -21,7 +21,6 @@ class Menu{
 
     void Bienvenida();
     
-    // void crearFuncion();
 
     ~Menu();
 
