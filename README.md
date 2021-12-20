@@ -19,9 +19,16 @@ Diseño e implementación de un sistema de cadena de cines.
 1. Grover:
     -> Autenticación
     -> Funciones
+    -> Manejo concurrente
 
 2. Alexander:
     -> Manejo de errores del sistema
     -> Algoritmo de encriptación de archivos.
     -> Generación de tokens para la realización de cada actividad del sistema
-    -> Manejo de ODBC driver con psqlODBC: [psqlODBC](https://odbc.postgresql.org/)
+
+# Fuentes Bibliograficas
+
+-   Shvets, A. (2019). Dive Into Design Patterns (1st ed.). Refactoring.Guru.
+-   Grimm, R. (2019). Concurrency with Modern C++ (1st ed.). Leanpub.
+-   Vandevoorde, D., Gregor, D., & Josuttis, N. (2018). C++ templates (2nd ed.). Pearson Education Inc.
+-   Wilf, H. (1994). Algorithms and Complexity. University of Pennsylvania. https://www2.math.upenn.edu/~wilf/AlgoComp.pdf
