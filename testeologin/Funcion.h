@@ -10,14 +10,29 @@
 #include<sstream>
 #include"Pelicula.h"
 #include"Sala.h"
+#include<vector>
 
 using namespace std;
 
+enum FuncionArgs{
+    NOMBRE=0,
+    NRO_SALA,
+    SCRIPT,
+    TIEMPO,
+    AFORO
+};
+
 class Funcion{
     public:
+    Funcion()=default;
+    Funcion(vector<string> _args);
     Funcion(const Pelicula &_peli, const Sala& _salaobj);
 
     thread StreamThread();
+    int getNroSala();
+    string getPelicula();
+    Pelicula getPeli();
+    Sala getSala();
 
     friend ostream& operator<<(ostream& os, Funcion f);
     

@@ -8,14 +8,16 @@
 #include"Utilidad.h"
 #include"FLoader.h"
 #include<cstdlib>
+#include"Establecimiento.h"
+#include"Compra.h"
 
 
 using namespace std;
 
 class Menu{
     public:
-
-    Menu();
+    
+    Menu(vector<Establecimiento> _ests);
 
     void Bienvenida();
     
@@ -29,12 +31,21 @@ class Menu{
     void SignUp();
     void LogAdmin();
     void credenciales();
+    void comprarEntradas();
     void MenuCliente();
+    void verPeliculas();
+    void verCompras();
+    void addCompra(Establecimiento _e, Funcion _f);
 
     private:
     FLoaderUsuario Clientes = FLoaderUsuario("data/cCliente.csv");
     FLoaderUsuario Administradores = FLoaderUsuario("data/cAdmin.csv");
     FLoaderPelicula Peliculas = FLoaderPelicula("data/pelicula.csv");
+
+    vector<Establecimiento> ests;
+
+    vector<Compra>Compras;
+
     stack<function<void(void)>> jerarquia;
     Usuario* select = nullptr;
 };

@@ -2,9 +2,9 @@ Bienvenido senhor
 
 Por favor, diganos que acción desea realizar:
 
--   0: Ver funciones de un cine en particular
--   1: Ver cines
--   2: Comprar entradas
--   3: Comprar dulces
+-   0: Ver funciones por cine
+-   1: Comprar entradas
+-   2: Ver peliculas en cartelera
+-   3: Ver compras
 
 Opcion: 

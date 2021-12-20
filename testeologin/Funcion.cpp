@@ -1,10 +1,26 @@
 #include "Funcion.h"
 
+Pelicula Funcion::getPeli(){
+    return peli;
+}
+Sala Funcion::getSala(){
+    return salaobj;
+}
+
+
+Funcion::Funcion(vector<string> _args)
+{    
+    peli = Pelicula(_args[FuncionArgs::SCRIPT], _args[FuncionArgs::NRO_SALA], stoi(_args[FuncionArgs::TIEMPO]));
+    salaobj = Sala( stoi(_args[FuncionArgs::NRO_SALA]), stoi(_args[FuncionArgs::AFORO]) );
+}
+
 ostream& operator<<(ostream& os, Funcion f){
-    os<<f.peli.getNombre()<<','<<f.salaobj.getNroSala()<<'\n';
+    os<<f.peli.getNombre()<<','<<f.salaobj.getNroSala()<<','<<f.peli.getScriptPath()<<','<<f.peli.getTiempo()<<','<<f.salaobj.getAforo()<<'\n';
     return os;
 }
 
+int Funcion::getNroSala(){return salaobj.getNroSala();}
+string Funcion::getPelicula(){return peli.getNombre();}
 
 Funcion::Funcion(const Pelicula &_peli, const Sala& _salaobj)
 :peli(_peli), salaobj(_salaobj){}
