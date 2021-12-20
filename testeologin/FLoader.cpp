@@ -50,9 +50,9 @@ void FLoaderUsuario::asignarObjetos(const vector<string>&_lineas){
         while (getline(linea, componente,',')){
             args.push_back(componente);
         }
-        // cout<<Usuario(args[0], args[1], args[2], args[3]);
+        
         objetos.push_back(new Usuario(args[0], args[1], args[2], args[3]));
-        // cout<<objetos.size();
+        
     }
 
 }
@@ -79,8 +79,8 @@ void FLoaderPelicula::asignarObjetos(const vector<string>&_lineas){
         while (getline(linea, componente,',')){
             args.push_back(componente);
         }
-        // cout<<Usuario(args[0], args[1], args[2], args[3]);
+        
         objetos.push_back(new Pelicula(args[0], args[2] , stoi(args[1])));
-        // cout<<objetos.size();
+        
     }
 }

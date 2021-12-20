@@ -84,7 +84,7 @@ class FLoaderPelicula: public FLoader<Pelicula>{
     void asignarObjetos(const vector<string>&_lineas) override;
 };
 
-// using FuncionDetalle = vector<string>;
+
 class FLoaderFuncion: public FLoader<Funcion>{
     public:
     FLoaderFuncion();
