@@ -16,7 +16,7 @@ using namespace std;
 
 class Menu{
     public:
-    
+    Menu()=default;
     Menu(vector<Establecimiento> _ests);
 
     void Bienvenida();

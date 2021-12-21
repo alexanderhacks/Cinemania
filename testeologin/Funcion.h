@@ -28,6 +28,7 @@ class Funcion{
     Funcion()=default;
     Funcion(vector<string> _args);
     Funcion(const Pelicula &_peli, const Sala& _salaobj);
+    ~Funcion();
 
     thread StreamThread();
     int getNroSala();

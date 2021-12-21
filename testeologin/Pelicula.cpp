@@ -4,6 +4,7 @@ Pelicula::Pelicula(const string &_nombre, const string &_script, const int &_tie
 :nombre(_nombre), script_path(_script), tiempo(_tiempo){
 
 }
+Pelicula::~Pelicula(){}
 
 string Pelicula::getScriptPath(){return script_path;}
 string Pelicula::getNombre(){return nombre;}

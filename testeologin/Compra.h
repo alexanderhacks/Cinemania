@@ -13,6 +13,7 @@ class Compra{
     public:
     Compra()=default;
     Compra(Funcion _f, Establecimiento _e, Usuario _p);
+    ~Compra(){}
 
     void verCompra();
     void imprimirCompra();

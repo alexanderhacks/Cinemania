@@ -6,6 +6,7 @@ class SalaEstructura{
     public:
     SalaEstructura()=default;
     SalaEstructura(const int &_aforo);
+    ~SalaEstructura();
     int getAforo();
     protected:
     int aforo;
@@ -16,6 +17,7 @@ class Sala{
     Sala()=default;
     Sala(const int& _nro_sala, const int&_aforo);
     Sala(const int& _nro_sala, SalaEstructura se);
+    ~Sala();
 
     friend ostream& operator<<(ostream& os, Sala s);
     int getNroSala();

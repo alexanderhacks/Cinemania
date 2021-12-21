@@ -24,6 +24,7 @@ class Establecimiento{
     vector<Sala>getSalas();
 
     void verFunciones();
+    ~Establecimiento();
 
     friend ostream& operator<<(ostream &os, const Establecimiento& e );
     FLoaderFuncion Funciones;

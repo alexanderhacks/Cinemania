@@ -2,6 +2,8 @@
 
 Compra::Compra(Funcion _f, Establecimiento _e, Usuario _p):f(_f), p(_p), e(_e){}
 
+Compra::~Compra(){}
+
 ostream& operator<<(ostream& os, Compra& c){
     ifstream archivo("res/tBoleta.txt");
     string line;

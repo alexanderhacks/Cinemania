@@ -8,7 +8,7 @@ class Pelicula{
     public:
     Pelicula()=default;
     Pelicula(const string &_nombre, const string &_script, const int &_tiempo);
-    
+    ~Pelicula();
     string getNombre();
     int getTiempo();
     string getScriptPath();

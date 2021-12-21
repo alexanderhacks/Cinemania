@@ -7,6 +7,8 @@ Sala Funcion::getSala(){
     return salaobj;
 }
 
+Funcion::~Funcion(){}
+
 
 Funcion::Funcion(vector<string> _args)
 {    

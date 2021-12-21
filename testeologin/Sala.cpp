@@ -26,3 +26,7 @@ ostream& operator<<(ostream& os, Sala s){
     os<<"Aforo: "<<s.getAforo()<<'\n';
     return os;
 }
+
+Sala::~Sala(){}
+
+SalaEstructura::~SalaEstructura(){}

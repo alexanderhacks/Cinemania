@@ -39,3 +39,5 @@ void Establecimiento::verFunciones(){
     }
     cout<<"========\n"<<endl;
 }
+
+Establecimiento::~Establecimiento(){}

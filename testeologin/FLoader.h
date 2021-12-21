@@ -69,6 +69,7 @@ class FLoaderUsuario: public FLoader<Usuario>{
     public:
     FLoaderUsuario();
     FLoaderUsuario(const string &_path);
+    ~FLoaderUsuario();
 
     protected:
     vector<string> juntarPalabras() override;
@@ -79,6 +80,7 @@ class FLoaderPelicula: public FLoader<Pelicula>{
     public:
     FLoaderPelicula();
     FLoaderPelicula(const string &_path);
+    ~FLoaderPelicula();
     protected:
     vector<string> juntarPalabras() override;
     void asignarObjetos(const vector<string>&_lineas) override;
@@ -89,6 +91,7 @@ class FLoaderFuncion: public FLoader<Funcion>{
     public:
     FLoaderFuncion();
     FLoaderFuncion(const string &_path);
+    ~FLoaderFuncion();
     protected:
     vector<string> juntarPalabras() override;
     void asignarObjetos(const vector<string>&_lineas) override;
