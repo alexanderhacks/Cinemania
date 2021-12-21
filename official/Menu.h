@@ -1,30 +1,29 @@
 #pragma once
-#include<iostream>
-#include<sstream>
-#include<iterator>
-#include<fstream>
-#include<functional>
-#include<stack>
-#include"Utilidad.h"
-#include"FLoader.h"
-#include<cstdlib>
-#include"Establecimiento.h"
-#include"Compra.h"
-
+#include <iostream>
+#include <sstream>
+#include <iterator>
+#include <fstream>
+#include <functional>
+#include <stack>
+#include "Utilidad.h"
+#include "FLoader.h"
+#include <cstdlib>
+#include "Establecimiento.h"
+#include "Compra.h"
 
 using namespace std;
 
-class Menu{
-    public:
-    Menu()=default;
+class Menu
+{
+public:
+    Menu() = default;
     Menu(vector<Establecimiento> _ests);
 
     void Bienvenida();
-    
 
     ~Menu();
 
-    protected:
+protected:
     void MenuAdmin();
     void LogIn();
     void SignUp();
@@ -37,11 +36,10 @@ class Menu{
     void addCompra(Establecimiento _e, Funcion _f);
 
     void IniciarFuncion();
-    void EjecutarFunciones(vector<Funcion>_funciones);
+    void EjecutarFunciones(vector<Funcion> _funciones);
     void CrearFuncion();
 
-
-    private:
+private:
     FLoaderUsuario Clientes = FLoaderUsuario("data/cCliente.csv");
     FLoaderUsuario Administradores = FLoaderUsuario("data/cAdmin.csv");
     FLoaderPelicula Peliculas = FLoaderPelicula("data/pelicula.csv");
@@ -53,5 +51,5 @@ class Menu{
     vector<CompraEntrada>Compras;
 
     stack<function<void(void)>> jerarquia;
-    Usuario* select = nullptr;
+    Usuario *select = nullptr;
 };

@@ -1,34 +1,34 @@
 #pragma once
-#include"Funcion.h"
-#include"FLoader.h"
-#include"Sala.h"
-#include<vector>
-#include<string>
-#include<iostream>
-#include"FLoader.h"
-#include"Sala.h"
-
-
+#include "Funcion.h"
+#include "FLoader.h"
+#include "Sala.h"
+#include <vector>
+#include <string>
+#include <iostream>
+#include "FLoader.h"
+#include "Sala.h"
 
 using namespace std;
 
-class Establecimiento{
-    public:
-    Establecimiento()=default;
-    Establecimiento(const string &_nombre, const string &_direccion, const vector<Sala>& _salas, string _path);
+class Establecimiento
+{
+public:
+    Establecimiento() = default;
+    Establecimiento(const string &_nombre, const string &_direccion, const vector<Sala> &_salas, string _path);
     void agregarFuncion(Funcion _funcion);
 
     string getNombres();
     string getDireccion();
 
-    vector<Sala>getSalas();
+    vector<Sala> getSalas();
 
     void verFunciones();
     ~Establecimiento();
 
-    friend ostream& operator<<(ostream &os, const Establecimiento& e );
+    friend ostream &operator<<(ostream &os, const Establecimiento &e);
     FLoaderFuncion Funciones;
-    private:
+
+private:
     vector<Sala> Salas;
     string nombre, direccion;
 };

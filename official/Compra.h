@@ -1,12 +1,12 @@
 #pragma once
 
-#include"Establecimiento.h"
-#include"FLoader.h"
-#include"Pelicula.h"
-#include"Funcion.h"
-#include<string>
-#include<iostream>
-#include<cstdlib>
+#include "Establecimiento.h"
+#include "FLoader.h"
+#include "Pelicula.h"
+#include "Funcion.h"
+#include <string>
+#include <iostream>
+#include <cstdlib>
 
 
 class Compra{
