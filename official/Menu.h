@@ -50,7 +50,7 @@ class Menu{
 
     vector<Establecimiento> ests;
 
-    vector<Compra>Compras;
+    vector<CompraEntrada>Compras;
 
     stack<function<void(void)>> jerarquia;
     Usuario* select = nullptr;

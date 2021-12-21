@@ -1,10 +1,12 @@
 #include "Compra.h"
 
-Compra::Compra(Funcion _f, Establecimiento _e, Usuario _p):f(_f), p(_p), e(_e){}
+Compra::Compra(Establecimiento _e, Usuario _p):p(_p), e(_e){}
+CompraEntrada::CompraEntrada(Funcion _f, Establecimiento _e, Usuario _p):f(_f),Compra(_e,_p){}
 
 Compra::~Compra(){}
+CompraEntrada::~CompraEntrada(){}
 
-ostream& operator<<(ostream& os, Compra& c){
+ostream& operator<<(ostream& os, CompraEntrada& c){
     ifstream archivo("res/tBoleta.txt");
     string line;
 

@@ -196,7 +196,7 @@ void Menu::comprarEntradas(){
 }
 
 void Menu::addCompra(Establecimiento _e, Funcion _f){
-    Compras.push_back(Compra(_f, _e, *(select)));
+    Compras.push_back(CompraEntrada(_f, _e, *(select)));
 }
 
 void Menu::verPeliculas(){
