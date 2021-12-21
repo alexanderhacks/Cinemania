@@ -13,7 +13,7 @@ class Compra{
     public:
     Compra()=default;
     Compra(Funcion _f, Establecimiento _e, Usuario _p); 
-    ~Compra(){}
+    ~Compra();
 
 
     friend ostream& operator<<(ostream& os, Compra& c); // Permite la salida para las opciones de ver compras e imprimir compras
