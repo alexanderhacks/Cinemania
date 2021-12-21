@@ -7,12 +7,12 @@
 class Administrador
 {
 private:
-    Administrador *admin;
+    static Administrador *admin;
     Administrador() = default;
 
 public:
     ~Administrador();
-    Administrador *GetAdministrador();
+    static Administrador *GetAdministrador();
     void GetHistoryData();
 };
 

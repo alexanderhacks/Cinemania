@@ -17,3 +17,9 @@ void Administrador::GetHistoryData()
     printData("./data/cCliente.csv");
     printData("./data/pelicula.csv");
 }
+
+// int main()
+// {
+//     Administrador* admin = Administrador::GetAdministrador();
+//     admin->GetHistoryData();
+// }
