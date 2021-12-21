@@ -12,16 +12,14 @@
 class Compra{
     public:
     Compra()=default;
-    Compra(Funcion _f, Establecimiento _e, Usuario _p);
+    Compra(Funcion _f, Establecimiento _e, Usuario _p); 
     ~Compra(){}
 
-    void verCompra();
-    void imprimirCompra();
 
-    friend ostream& operator<<(ostream& os, Compra& c);
+    friend ostream& operator<<(ostream& os, Compra& c); // Permite la salida para las opciones de ver compras e imprimir compras
 
     private:
-    Usuario p;
-    Funcion f;
-    Establecimiento e;
+    Usuario p; // Permitira la salida de datos del usuario que haya iniciado sesión
+    Funcion f; // Permitira la salida de datos de la funcion a la que se haya seleccionado
+    Establecimiento e; // Permitira la salida de datos para la 
 };
