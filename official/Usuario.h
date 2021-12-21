@@ -1,20 +1,21 @@
 #ifndef Usuario_h
 #define Usuario_h
 
-#include<iostream>
-#include<fstream>
-#include<string>
-#include<cstdlib>
-#include<vector>
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <cstdlib>
+#include <vector>
 
 using namespace std;
 
-class Usuario{
-    public:
+class Usuario
+{
+public:
     Usuario();
-    Usuario(const int& _null);
+    Usuario(const int &_null);
     Usuario(string _nombre, string _apellido, string _dni, string _clave);
-    Usuario(const vector<string>&_args);
+    Usuario(const vector<string> &_args);
     void setNombre();
     void setApellido();
     void setClave();
@@ -25,11 +26,11 @@ class Usuario{
     string getDni();
     ~Usuario();
 
-    friend ostream& operator<<(ostream &os, const Usuario& usr);
+    friend ostream &operator<<(ostream &os, const Usuario &usr);
 
-    friend bool operator==(const Usuario& usr1, const Usuario& usr2);
+    friend bool operator==(const Usuario &usr1, const Usuario &usr2);
 
-    private:
+private:
     string nombre, apellido, dni, clave;
 };
 

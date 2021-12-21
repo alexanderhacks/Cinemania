@@ -7,7 +7,7 @@ Compra::~Compra(){}
 ostream& operator<<(ostream& os, Compra& c){
     ifstream archivo("res/tBoleta.txt");
     string line;
-
+    
     if(archivo.is_open()){
         int i=1;
         while(getline(archivo, line)){
