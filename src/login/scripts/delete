@@ -1,0 +1,3 @@
+rm *.obj
+rm *.ilk
+rm *.pdb
