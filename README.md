@@ -7,7 +7,7 @@ Diseño e implementación de un sistema de cadena de cines.
 
 **Ugarte Quispe, Grover**
 
-**Chumbe, Herbert**
+**Chumbe Ñahui, Herbert**
 
 ## Rúbrica
 - [ ] Sin errores, acepta gran cantidad de información, manejo de errores, autonomía, interfaz y documentación adecuada.
@@ -27,6 +27,10 @@ Diseño e implementación de un sistema de cadena de cines.
     -> Manejo de errores del sistema
     -> Algoritmo de encriptación de archivos.
     -> Generación de tokens para la realización de cada actividad del sistema
+3. Herbert:
+    -> Diagrama de clase 
+# Video
+https://www.youtube.com/watch?v=z25fWuadz7Y
 
 # Diagrama de clases y descripcion
 
