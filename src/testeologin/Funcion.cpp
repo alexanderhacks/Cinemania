@@ -1,44 +1,49 @@
 #include "Funcion.h"
 
+Pelicula Funcion::getPeli(){
+    return peli;
+}
+Sala Funcion::getSala(){
+    return salaobj;
+}
+
+
+Funcion::Funcion(vector<string> _args)
+{    
+    peli = Pelicula(_args[FuncionArgs::NOMBRE], _args[FuncionArgs::SCRIPT], stoi(_args[FuncionArgs::TIEMPO]));
+    salaobj = Sala( stoi(_args[FuncionArgs::NRO_SALA]), stoi(_args[FuncionArgs::AFORO]) );
+}
+
 ostream& operator<<(ostream& os, Funcion f){
-    os<<f.peli.getNombre()<<','<<f.salaobj.getNroSala()<<'\n';
+    os<<f.peli.getNombre()<<','<<f.salaobj.getNroSala()<<','<<f.peli.getScriptPath()<<','<<f.peli.getTiempo()<<','<<f.salaobj.getAforo()<<'\n';
     return os;
 }
 
+int Funcion::getNroSala(){return salaobj.getNroSala();}
+string Funcion::getPelicula(){return peli.getNombre();}
 
 Funcion::Funcion(const Pelicula &_peli, const Sala& _salaobj)
 :peli(_peli), salaobj(_salaobj){}
 
 
 thread Funcion::StreamThread(){
-    return thread([=]{Stream();});
+    return thread(&Funcion::Stream, this);
 }
 
 
 void Funcion::Stream(){
 
+    cout<<peli.getNombre();
     time_t actual;
     time(&actual);
 
     string tiempo_solo = ctime(&actual);
 
-    
-    istringstream tiempoString(tiempo_solo.substr(0,22));
-
-    string titulo="", comp, titulo1="";
-    while(getline(tiempoString,comp, ' ')){
-        titulo+=comp;
-    }
-
-    tiempoString = istringstream(titulo);
-    while(getline(tiempoString,comp, ':')){
-        titulo1+=comp;
-    }
-
+    string nombreArchivo = to_string(rand()%98)+peli.getNombre()+".mp4";
     fstream salida;
-    salida.open(peli.getNombre()+titulo1+".mp4", ios_base::out);
+    salida.open(nombreArchivo, ios_base::out);
     for(int i=0; i<peli.getTiempo(); i++){
-        salida<<peli.getScriptPath()<<' ';
+        salida<<tiempo_solo<<peli.getScriptPath()<<' ';
         if(i%9==0){
             salida<<'\n';
         }

@@ -26,6 +26,10 @@ Diseño e implementación de un sistema de cadena de cines.
     -> Algoritmo de encriptación de archivos.
     -> Generación de tokens para la realización de cada actividad del sistema
 
+# Diagrama de clases y descripcion
+
+
+
 # Fuentes Bibliograficas
 
 -   Shvets, A. (2019). Dive Into Design Patterns (1st ed.). Refactoring.Guru.

@@ -6,7 +6,10 @@ vector<string> FLoaderFuncion::juntarPalabras(){
     vector<string> result;
 
     for(auto i :objetos){
-        string csv_u = (*i)[0]+ ","+(*i)[1];
+        Funcion j = *i;
+        string csv_u{j.getPeli().getNombre()+","+to_string(j.getNroSala())+
+            ","+j.getPeli().getScriptPath()+","+to_string(j.getPeli().getTiempo())+
+            ","+to_string(j.getSala().getAforo())};
         result.push_back(csv_u);
     }
 
@@ -20,7 +23,7 @@ void FLoaderFuncion::asignarObjetos(const vector<string>&_lineas){
         while (getline(linea, componente,',')){
             args.push_back(componente);
         }
-        objetos.push_back(new vector<string>{args[0], args[1]});
+        objetos.push_back(new Funcion(vector<string>{args[0], args[1], args[2],args[3],args[4]}));
     }
 }
 
@@ -47,9 +50,9 @@ void FLoaderUsuario::asignarObjetos(const vector<string>&_lineas){
         while (getline(linea, componente,',')){
             args.push_back(componente);
         }
-        // cout<<Usuario(args[0], args[1], args[2], args[3]);
+        
         objetos.push_back(new Usuario(args[0], args[1], args[2], args[3]));
-        // cout<<objetos.size();
+        
     }
 
 }
@@ -76,8 +79,8 @@ void FLoaderPelicula::asignarObjetos(const vector<string>&_lineas){
         while (getline(linea, componente,',')){
             args.push_back(componente);
         }
-        // cout<<Usuario(args[0], args[1], args[2], args[3]);
+        
         objetos.push_back(new Pelicula(args[0], args[2] , stoi(args[1])));
-        // cout<<objetos.size();
+        
     }
 }
