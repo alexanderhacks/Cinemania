@@ -1,3 +1,5 @@
 rm *.obj
 rm *.ilk
 rm *.pdb
+rm *.mp4
+rm *.pdf
