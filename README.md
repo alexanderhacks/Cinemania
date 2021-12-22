@@ -96,6 +96,14 @@ Son clases heredades y especializadas de FLoader que permite la carga de archivo
 - Contiene funciones para la impresión total de archivos y entrada estandar simúltaneamente
 - Contiene funciones para asignar adecuadamente la función a tomar por el stack decididor de funciones
 
+# Patrones empleados en cada clase
+
+- Template Method - FLoader : Para cada especialización, hemos creado algoritmos para cargar y escribir archivos, los cuales variarán por objetos.
+- Memento - FLoader : Floader y sus especializaciones permiten establecer a las instancias de Funcion, Pelicula y Usuario a su estado mas actual tomando los archivos CSV encontrados en /data.
+- Chain of Responsibility - Menu : Empleando el namespace en Utilidad.cpp/.h, nos encargamos de que el stac tenga siempre las funciones de cada submenu, asemejandose a un estructura arbol
+- Singleton - FLoader y sus derivaciones : En la Clase Menu y Establecimiento, solo es necesario una instancia de cada especialización de FLoadeer para proveer al resto de objetos con los datos de los CSV
+- Builder - Compra : Hemos instanciado una clase compra que se encarga de poder especializar la creación de objetos por medio de sus objetos a crear.
+
 # Fuentes Bibliograficas
 
 -   Shvets, A. (2019). Dive Into Design Patterns (1st ed.). Refactoring.Guru.
